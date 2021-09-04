@@ -1,0 +1,110 @@
+
+@media only screen and (max-width: 600px) {
+
+*{ 
+    width: 600px;
+}
+.big-text { 
+    text-align: center;
+    padding-top: 50px;
+    font-family: Poppins-medium;
+    font-size: 40px;
+}
+
+.small-text { 
+    text-align: center;
+    padding-top: 10px;
+    font-family: Poppins-light;
+}
+.icons { 
+    padding-top: 40px;
+    width: 60px;
+    
+}
+
+.element { 
+    padding-top: 30px;
+    text-align: center;
+}
+
+.big-info{ 
+    font-family: Poppins-medium;
+    font-size: 40px;
+}
+
+.small-info { 
+    padding-top: 10px;
+    font-family: Poppins-light;
+}
+
+}
+
+@media only screen and (min-width: 600px) {
+
+.wrapper {
+    margin-top: 100px; 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 130px;
+    
+}
+
+
+.right-info { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right: 300px;
+
+}
+
+.top { 
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.left-info { 
+    margin-left: 200px;
+}
+
+.big-text { 
+    font-family: Poppins-medium;
+    font-size: 40px;
+}
+
+.small-text { 
+    padding-top: 10px;
+    font-family: Poppins-light;
+}
+
+.element { 
+    
+    align-items: center;
+    margin-left: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.big-info { 
+    padding-left: 20px;
+    font-family: Poppins-medium;
+    font-size: 22px;
+}
+
+.small-info { 
+    padding-left: 20px;
+    font-family: Poppins-light;
+    font-size: 13px;
+}
+
+.icons { 
+    width: 30px;
+    
+}
+
+}

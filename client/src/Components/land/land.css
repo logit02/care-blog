@@ -1,0 +1,94 @@
+@media only screen and (max-width: 600px) {
+
+*{ 
+    width: 600px;
+}
+.iphone, .right-part{
+    display: none;
+}
+
+
+
+.bold-text{ 
+    font-size: 45px;
+}
+
+.button-start{
+    width: 200px;
+}
+.button-start { 
+    
+    font-size: 22px;
+    padding: 10px;
+    background-color:#6CCFF6;
+    color: white;
+    border: solid #6CCFF6;
+    border-radius: 10px;
+}
+
+.text-part {
+    text-align: center;
+    font-size: 70px;
+    font-family: Poppins-medium;
+    padding-top: 100px;
+  
+}
+
+.logos { 
+    padding-top: 50px;
+    margin-left: 20px;
+    width: 90%;
+}
+
+}
+
+@media only screen and (min-width: 600px){
+
+.bold-text{ 
+    font-size: 65px;
+
+}
+
+
+.back-land { 
+   
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 200px;
+}
+
+.text-part {
+    text-align: center;
+    width: 800px;
+    color: white;
+    font-size: 70px;
+    font-family: Poppins-medium;
+    padding-top: 180px;
+    padding-left: 200px;
+}
+.right-part{
+    padding-top: 80px;
+    padding-right: 150px;
+}
+
+.button-start { 
+    font-size: 22px;
+    padding: 10px;
+    background-color:#6CCFF6;
+    color: white;
+    border: solid #6CCFF6;
+    border-radius: 10px;
+}
+
+.logos { 
+    padding-top: 50px;
+    margin-left: 160px;
+    width: 80%;
+}
+
+.iphone { 
+  
+    height: 680px;
+}
+}
