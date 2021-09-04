@@ -2,17 +2,26 @@ import { BrowserRouter, Redirect, Switch , Route} from 'react-router-dom'
 import Navigator from './Components/Navigator/nav'
 import './index.css'
 import Land from './Components/land/land'
-import Land2 from './Components/land-2/land-2'
-import Stories from './Components/stories/stories.js'
-import Info from './Components/info/info.js'
-
 import Footer from './Components/Footer/footer.js'
 import Blog from './Components/Blog/blog'
 import Single from './Components/Blog/single/single'
 import Write from './Components/Write/write'
 import Sidebar from './Components/Sidebar/sidebar'
-
+import { useEffect, useState } from 'react'
+import axios from 'axios'
 function App() {
+
+  const [posts, setPosts] = useState([])
+
+  useEffect(() =>{
+    const fetchPosts = async ()=>{
+       const res = await axios.get("http://localhost:5000/api/posts")
+       setPosts(res.data)
+    }
+    fetchPosts()
+  })
+
+
   return (
     <div className="App">
       
@@ -23,7 +32,7 @@ function App() {
               <Navigator />
               <Land />
               <div className='blog-side'>
-              <Blog /> 
+              <Blog posts={posts} /> 
               <Sidebar />
               </div>
               
@@ -39,16 +48,16 @@ function App() {
           </div>
         </Route>
         <Route path='/post/:postId'>
-           <div className='body_top'>
-               
+         
               <Single />
-          </div>
+              
+        
         </Route>
         <Route path='/write'>
-           <div className='body_top'>
+           
                <Navigator />
               <Write />
-          </div>
+        
         </Route>
         
 

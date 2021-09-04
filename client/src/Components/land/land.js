@@ -1,6 +1,5 @@
 import './land.css'
-import iphone from '../../Assets/Images/Hero/Mobile/iPhone X.png'
-import logos from '../../Assets/Images/Logo Clouds/Logos.png'
+
 function Land(){
     return(
         <div>

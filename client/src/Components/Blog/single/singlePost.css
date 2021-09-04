@@ -50,6 +50,9 @@
   }
   
   .singlePostAuthor{
+    text-decoration: none;
+    color: #be9656;
+    font-family: "Varela Round", Arial, Helvetica, sans-serif;
     margin-left: 5px;
   }
   

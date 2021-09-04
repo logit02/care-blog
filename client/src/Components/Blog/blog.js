@@ -1,15 +1,12 @@
 import './blog.css'
 import Post from './post.js'
 
-function Blog(){
+function Blog({posts}){
     return(
         <div className='posts'>
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
-            <Post />
+            {posts.map((p) =>(
+                <Post post ={p} />
+            ))}
         </div>
        
     )

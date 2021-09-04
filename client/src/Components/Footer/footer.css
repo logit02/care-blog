@@ -5,7 +5,7 @@
 }
 .footer-wrap { 
     padding-top: 100px;
-    background: #0B0D17;
+    background: #6CCFF6;
     height: 45vh;
     text-align: center;
 }
@@ -39,7 +39,7 @@
 @media only screen and (min-width: 600px) {
 
 .footer-wrap { 
-    background: #0B0D17;
+    background: #6CCFF6;
     height: 280px;
     display: flex;
     flex-direction: row;
@@ -51,9 +51,9 @@
     font-size: 14px;
     padding-right: 20px;
     text-decoration: none;
-    color: white;
+    color: black;
     font-family: Poppins-light;
-    opacity: 0.7;
+    
 
 }
 

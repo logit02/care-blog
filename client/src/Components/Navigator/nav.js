@@ -2,8 +2,7 @@ import './nav.css'
 import React from 'react'
 import { NavLink} from 'react-router-dom'
 import logo from '../../Assets/logo.png'
-import app_store from '../../Assets/Images/Hero/Header/Download Badge/App Store Badge.png'
-import google_play from '../../Assets/Images/Hero/Header/Download Badge/artwork.png'
+
 function Navigator(){
     return(
         <div className='nav-back'>
