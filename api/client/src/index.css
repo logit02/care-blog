@@ -1,0 +1,64 @@
+
+
+*{
+   margin: 0;
+   padding: 0;
+}
+
+@font-face {
+  font-family: 'Poppins-medium';
+  src: url('./Assets/Fonts/Poppins/Poppins-Medium.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-light';
+  src: url('./Assets/Fonts/Poppins/Poppins-Light.ttf');
+}
+
+
+@font-face {
+  font-family: 'Poppins-black';
+  src: url('./Assets/Fonts/Poppins/Poppins-Black.ttf');
+}
+
+@media only screen and (min-width: 501px) and (max-width: 700px){
+.body_top{
+  background: url('https://images.pexels.com/photos/5012071/pexels-photo-5012071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  height: 520px;
+}
+.blog-side { 
+  padding-top: 60px;
+  display: flex;
+  flex-direction: row;
+}
+}
+
+@media only screen and (min-width: 700px){
+  .blog-side { 
+    display: flex;
+    flex-direction: row;
+  }
+  .body_top{
+    background: url('https://images.pexels.com/photos/5012071/pexels-photo-5012071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: 100% 130%;
+    height: 720px; 
+  }
+
+}
+
+@media only screen and (max-width: 500px) and (min-width: 0px)  {
+  .body_top{
+    width: 500px;
+    background: url('https://images.pexels.com/photos/5012071/pexels-photo-5012071.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 420px; 
+  }
+}
+
+
+
+

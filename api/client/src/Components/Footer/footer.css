@@ -1,7 +1,7 @@
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 500px) {
 
 *{
-    width: 600px;
+    width: 500px;
 }
 .footer-wrap { 
     padding-top: 100px;
@@ -18,9 +18,10 @@
 }
 
 .link {
+    width: 500px;
     padding-top: 30px;
     font-size: 14px;
-    padding-right: 20px;
+    
     text-decoration: none;
     color: white;
     font-family: Poppins-light;
@@ -36,7 +37,7 @@
 
 
 }
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 501px) and (max-width: 700px) {
 
 .footer-wrap { 
     background: #6CCFF6;
@@ -86,3 +87,40 @@
 }
 
 }
+@media only screen and (min-width: 701px) {
+
+    
+    .footer-wrap { 
+        padding-top: 100px;
+        background: #6CCFF6;
+        height: 45vh;
+        text-align: center;
+    }
+    
+    .store-n { 
+        padding-top: 21px;
+        height: 30px;
+        width: 100px;
+        padding-left: 10px;
+    }
+    
+    .link {
+        padding-top: 30px;
+        font-size: 14px;
+        padding-right: 20px;
+        text-decoration: none;
+        color: white;
+        font-family: Poppins-light;
+        opacity: 0.7;
+    
+    }
+    
+    .logo-footer { 
+        height: 50px;
+        width: 50px;
+        padding-bottom: 30px;
+    }
+    
+    
+    }
+    

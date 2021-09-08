@@ -1,16 +1,10 @@
-@media only screen and (max-width: 600px) {
-
-*{ 
-    width: 600px;
-}
-.iphone, .right-part{
-    display: none;
-}
-
+@media only screen and (min-width: 501px) and (max-width: 700px) {
 
 
 .bold-text{ 
+   
     font-size: 45px;
+    color: white;
 }
 
 .button-start{
@@ -42,10 +36,11 @@
 
 }
 
-@media only screen and (min-width: 600px){
+@media only screen and (min-width: 700px) {
 
 .bold-text{ 
     font-size: 65px;
+    
 
 }
 
@@ -60,12 +55,12 @@
 
 .text-part {
     text-align: center;
-    width: 800px;
+    width: 100%;
     color: white;
     font-size: 70px;
     font-family: Poppins-medium;
     padding-top: 180px;
-    padding-left: 200px;
+    
 }
 .right-part{
     padding-top: 80px;
@@ -81,14 +76,42 @@
     border-radius: 10px;
 }
 
-.logos { 
-    padding-top: 50px;
-    margin-left: 160px;
-    width: 80%;
-}
+
 
 .iphone { 
   
     height: 680px;
 }
 }
+
+@media only screen and (max-width: 500px) and (min-width: 0px)  {
+    
+.bold-text{ 
+    width: 500px;
+    font-size: 35px;
+    color: white;
+}
+
+.button-start{
+    margin-left: 170px;
+    width: 130px;
+    font-size: 15px;
+    padding: 10px;
+    background-color:#6CCFF6;
+    color: white;
+    border: solid #6CCFF6;
+    border-radius: 10px;
+}
+
+.text-part {
+    
+    width: 200px;
+    text-align: center;
+    font-size: 50px;
+    font-family: Poppins-medium;
+    padding-top: 100px;
+    color: black;
+  
+}
+}
+

@@ -1,5 +1,7 @@
 const router = require('express').Router();
 const Category = require("../models/Category")
+const cors = require('cors')
+router.use(cors());
 
 
 

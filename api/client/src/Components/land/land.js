@@ -5,20 +5,11 @@ function Land(){
         <div>
     <div className='back-land'>
         <div className='text-part'>
-            <p className='bold-text'>Women care assistant <br/>
-                and blog!
+            <p className='bold-text'>Womencare assistance, <br/>
+                products and blog!
             </p>
             <button className='button-start'>Get Started</button>
         </div>
-
-        <div className='right-part'>
-
-            
-           
-
-        </div>
-
-         
         </div>
       
 
