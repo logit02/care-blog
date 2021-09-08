@@ -4,8 +4,7 @@ import logo from '../../Assets/logo.png'
 import icon from '../../Assets/arrow.png'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
-import axios from 'axios'
-import {axiosInstance} from '../../client/src/config.js'
+import {axiosInstance} from '../../config'
 
 
 export default function Register (){

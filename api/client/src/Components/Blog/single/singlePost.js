@@ -2,7 +2,8 @@ import { Link } from "react-router-dom";
 import "./singlePost.css";
 import { useLocation } from "react-router";
 import { useEffect, useState } from "react";
-import axios from "axios"
+import {axiosInstance} from '../../../config'
+
 
 export default function SinglePost() {
   const location = useLocation()
@@ -11,7 +12,7 @@ export default function SinglePost() {
 
   useEffect(() => {
     const getPost = async ()=>{
-    const res = await axios.get("http://localhost:5000/api/posts/"+path)
+    const res = await axiosInstance.get("/posts/"+path)
    
     setPost(res.data)
   

@@ -5,8 +5,8 @@ import icon from '../../Assets/arrow.png'
 import {Link} from 'react-router-dom'
 import { useContext, useRef } from 'react'
 import { Context } from '../context/Context'
-import axios from 'axios'
-import {axiosInstance} from '../../client/src/config.js'
+
+import {axiosInstance} from '../../config'
 
 
 export default function Admin (){
@@ -31,7 +31,8 @@ export default function Admin (){
                 username:userRef.current.value,
                 password:passwordRef.current.value,
             })   
-            dispatch({type:"LOGIN_SUCCESS", payload:res.data});
+            dispatch({type:"LOGIN_SUCCESS", payload:res.data})
+            window.location = '/dashboard';
            
        }catch(err) { 
             dispatch({type:"LOGIN_FAILURE"});
@@ -52,7 +53,7 @@ export default function Admin (){
                     <p className='hint'>Username</p>
                     <input type = 'text' className='input' placeholder='input your username here' ref = {userRef}></input>
                     <p className='hint'>Password</p>
-                    <input type = 'text' className='input' placeholder='input your password here' ref = {passwordRef}></input>
+                    <input type = 'password' className='input' placeholder='input your password here' ref = {passwordRef}></input>
                 </div>
                 <div className='login-up'>
                     <button className='button-login' onClick = {handleClick} disabled = {isFetching}>Login</button>

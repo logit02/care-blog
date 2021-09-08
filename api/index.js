@@ -7,6 +7,7 @@ const userRoute = require('./roots/users')
 const postRoute = require('./roots/posts')
 const catRoute = require('./roots/categories')
 const multer = require('multer')
+const path = require('path');
 
 
 
@@ -43,7 +44,7 @@ app.use("/api/categories", catRoute);
 app.use(express.static(path.join(__dirname, "/client/build")));
 
 app.get("*", (req,res) => {
-    res.sendFile(Path.join(__dirname, '/client/build', 'index.html'));
+    res.sendFile(path.join(__dirname, '/client/build', 'index.html'));
 });
 
 app.listen(process.env.PORT || 5000, ()=>{

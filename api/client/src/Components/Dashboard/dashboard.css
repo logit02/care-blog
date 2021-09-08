@@ -1,0 +1,54 @@
+.dashboard { 
+    display: flex;
+    flex-direction: row;
+    width: 200px;
+}
+.dash-left {
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #6CCFF6;
+    border-radius: 24px;
+    height: 680px;
+    width: 115px;
+    margin-left: 20px;
+    box-shadow: 5px 10px 55px #6CCFF6;
+}
+.icons { 
+    margin-top: 100px;
+   
+}
+
+.logo-dashboard { 
+    margin-top: 40px;
+    width: 40px;
+    height: 40px;
+    transition: transform .7s ease-in-out;
+}
+.logo-dashboard:hover { 
+    transform: rotate(360deg);
+}
+.dash-left-icons, .dash-left-icons-last{
+    margin-top: 0px;
+    height: 22px;
+    width: 22px;
+    margin-bottom: 60px;
+    transition: transform 0.3s ease;
+    transform: translateX(0px);  
+    
+}
+
+ .dash-left-icons:hover, .dash-left-icons-last:hover { 
+    transform: translateX(10px);
+}
+.dash-left-icons-last{ 
+    margin-top: 100px;
+    }
+.icon-containter { 
+    list-style: none;
+    width: 132px;
+    text-align: center;
+
+}

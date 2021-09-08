@@ -1,4 +1,4 @@
-import { BrowserRouter,  Switch , Route} from 'react-router-dom'
+import { BrowserRouter,  Switch , Route, Redirect} from 'react-router-dom'
 import Navigator from './Components/Navigator/nav'
 import './index.css'
 import Land from './Components/land/land'
@@ -7,16 +7,16 @@ import Blog from './Components/Blog/blog'
 import Single from './Components/Blog/single/single'
 import Write from './Components/Write/write'
 import Sidebar from './Components/Sidebar/sidebar'
-import { useContext, useEffect, useState } from 'react'
-import axios from 'axios'
+import {  useEffect, useState } from 'react'
 import Admin from './Components/Admin/admin'
 import { useLocation } from 'react-router';
 import Register from './Components/Admin/register'
-import {Context} from './Components/context/Context'
+import Dashboard from './Components/Dashboard/dashboard'
+
 import {axiosInstance} from '../../client/src/config.js'
 
 function App() {
-const {user} = useContext(Context)
+
   const [posts, setPosts] = useState([])
   const {search} = useLocation();
   
@@ -62,9 +62,13 @@ const {user} = useContext(Context)
       <Route path = '/about'>
           <Navigator />
         </Route>      
-        <Route to ='/register'>
+        <Route path ='/register'>
             <Register />
           </Route> 
+          <Route path ='/dashboard/'>
+            <Dashboard />
+          </Route> 
+         
         </Switch>
       </BrowserRouter>
     </div>

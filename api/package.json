@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "heroku-postbuild":"cd client && npm install && npm run build"
+    "heroku-postbuild": "cd client && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
+    "body-parser": "*",
     "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "*",
+    "mongoose": "^6.0.5",
     "multer": "^1.4.3",
     "nodemon": "^2.0.12"
   }
