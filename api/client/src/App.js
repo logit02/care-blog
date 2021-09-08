@@ -13,7 +13,7 @@ import Admin from './Components/Admin/admin'
 import { useLocation } from 'react-router';
 import Register from './Components/Admin/register'
 import {Context} from './Components/context/Context'
-
+import {axiosInstance} from '../../client/src/config.js'
 
 function App() {
 const {user} = useContext(Context)
@@ -23,7 +23,7 @@ const {user} = useContext(Context)
 
   useEffect(() =>{
     const fetchPosts = async ()=>{
-       const res = await axios.get("http://localhost:5000/api/posts" + search )
+       const res = await axiosInstance.get("/posts" + search )
        setPosts(res.data)
     }
     fetchPosts();

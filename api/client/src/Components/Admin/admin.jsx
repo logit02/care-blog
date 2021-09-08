@@ -6,11 +6,15 @@ import {Link} from 'react-router-dom'
 import { useContext, useRef } from 'react'
 import { Context } from '../context/Context'
 import axios from 'axios'
+import {axiosInstance} from '../../client/src/config.js'
+
 
 export default function Admin (){
     const userRef = useRef()
     const passwordRef = useRef()
     const { dispatch, isFetching} = useContext(Context)
+
+
     
     function register(){
         return( window.location ='/register')
@@ -23,7 +27,7 @@ export default function Admin (){
        dispatch({type:"LOGIN_START"});
        try{
         
-            const res = await axios.post("http://localhost:5000/api/auth/login", { 
+            const res = await axiosInstance.post("/auth/login", { 
                 username:userRef.current.value,
                 password:passwordRef.current.value,
             })   

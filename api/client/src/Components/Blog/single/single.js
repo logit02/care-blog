@@ -1,5 +1,5 @@
 import './single.css'
-import Navigator from '../../../Components/Navigator/nav.js'
+import Navigator from '../../Navigator/nav.js'
 import SinglePost from './singlePost'
 
 export default function Single(){

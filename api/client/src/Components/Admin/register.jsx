@@ -5,6 +5,8 @@ import icon from '../../Assets/arrow.png'
 import {Link} from 'react-router-dom'
 import { useState } from 'react'
 import axios from 'axios'
+import {axiosInstance} from '../../client/src/config.js'
+
 
 export default function Register (){
     const [username, setUsername] = useState("")
@@ -15,7 +17,7 @@ export default function Register (){
         e.preventDefault(); 
         try{
             setError(true); 
-        const res = await axios.post("http://localhost:5000/api/auth/register", {
+        const res = await axiosInstance.post("/auth/register", {
             username,email,password,
         })
         res.data && window.location.replace("/admin");
