@@ -17,7 +17,7 @@
     box-shadow: 5px 10px 55px #6CCFF6;
 }
 .icons { 
-    margin-top: 100px;
+    margin-top: 40px;
    
 }
 
@@ -44,11 +44,27 @@
     transform: translateX(10px);
 }
 .dash-left-icons-last{ 
-    margin-top: 100px;
+    margin-top: 20px;
     }
 .icon-containter { 
     list-style: none;
     width: 132px;
     text-align: center;
 
+}
+
+
+.greet { 
+    font-family: Poppins-medium;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+}
+.prof-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+   margin-left: 45px;
+   margin-bottom: 50px;
 }

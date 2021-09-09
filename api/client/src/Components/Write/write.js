@@ -7,6 +7,7 @@ export default function Write() {
   const titleRef = useRef()
   const descRef = useRef()
   const imageRef = useRef()
+  const imgurlRef = useRef()
   const handleClick = async (e) => {
     e.preventDefault();  
     try{
@@ -14,13 +15,14 @@ export default function Write() {
       username:"inesa",
       title:titleRef.current.value, 
       desc:descRef.current.value,
-      photo:'https://images.pexels.com/photos/7788611/pexels-photo-7788611.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'
+      photo:imgurlRef.current.value,
 
     })}catch(err){
       console.log(err);
     }
     titleRef.current.value=''
     descRef.current.value=''
+    imgurlRef.current.value = ''
   }
   
 
@@ -33,8 +35,12 @@ export default function Write() {
         alt=""
       />
       <form className="writeForm">
+        <div className='image-solved'>
       <input id="fileInput" type="file" ref = {imageRef} />
+      <input className='input-image-url' type="text" placeholder='image url' ref={imgurlRef} />
+      </div>
         <div className="writeFormGroup">
+        
           <input
             className="writeInput"
             placeholder="Title"

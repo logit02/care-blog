@@ -17,6 +17,7 @@
   .writeFormGroup {
     margin-left: 150px;
     display: flex;
+    
     align-items: center;
   }
   
@@ -35,12 +36,31 @@
   
   .writeInput {
       margin-top: 30px;
-    font-size: 30px;
+    font-size: 28px;
     border: none;
-    padding: 20px;
-    width: 63vw;
+    padding: 12px;
+    width: 33vw;
+    background: rgb(241, 241, 241);
+    border-radius: 20px;
+   
     
    
+  }
+  .input-image-url { 
+    margin-top: 30px;
+    font-size: 16px;
+    border: solid 1px transparent;
+    padding: 10px;
+    width: 23vw;
+    margin-left: 150px;
+    
+    border-bottom:solid 2px rgb(241, 241, 241);
+
+    
+  }
+
+  .input-image-url:focus {
+    outline-style: none;
   }
   
   .writeInput::placeholder {
@@ -50,24 +70,29 @@
    
   }
 
-  
+  .image-solved { 
+    display: flex;
+    flex-direction: column;
+  }
   
   .writeInput:focus {
     outline-style: none;
   }
   
   .writeText {
-     
+    padding-top: 40px;
+    background: rgb(241, 241, 241);
     margin-top: 60px;
-    width: 70vw;
+    width: 65vw;
     height: 10vh;
     font-family: inherit;
     font-size: 20px;
+    border-radius: 20px;
   }
   
   .writeSubmit {
     position: absolute;
-    top: 90px;
+    top: 70px;
     right: 50px;
     color: white;
     background-color: #6CCFF6;
@@ -78,7 +103,7 @@
     cursor: pointer;
     display: flex;
     align-items: center;
-    margin-right: -10px;
+    margin-right: -50px;
   }
 
   #fileInput { 

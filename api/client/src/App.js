@@ -7,16 +7,17 @@ import Blog from './Components/Blog/blog'
 import Single from './Components/Blog/single/single'
 import Write from './Components/Write/write'
 import Sidebar from './Components/Sidebar/sidebar'
-import {  useEffect, useState } from 'react'
+import {  useContext, useEffect, useState } from 'react'
 import Admin from './Components/Admin/admin'
 import { useLocation } from 'react-router';
 import Register from './Components/Admin/register'
 import Dashboard from './Components/Dashboard/dashboard'
-
+import {Context} from '../src/Components/context/Context'
 import {axiosInstance} from '../../client/src/config.js'
+import Dash from './Components/Dashboard/dashboard'
 
 function App() {
-
+  const {user} = useContext(Context)
   const [posts, setPosts] = useState([])
   const {search} = useLocation();
   
@@ -65,8 +66,8 @@ function App() {
         <Route path ='/register'>
             <Register />
           </Route> 
-          <Route path ='/dashboard/'>
-            <Dashboard />
+          <Route path ='/dashboard/' render={ ()=>(user ? (<Dashboard />) : (<Redirect to="/admin" />) )}>
+            
           </Route> 
          
         </Switch>
