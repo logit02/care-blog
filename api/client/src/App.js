@@ -14,7 +14,7 @@ import Register from './Components/Admin/register'
 import Dashboard from './Components/Dashboard/dashboard'
 import {Context} from '../src/Components/context/Context'
 import {axiosInstance} from '../../client/src/config.js'
-import Dash from './Components/Dashboard/dashboard'
+
 
 function App() {
   const {user} = useContext(Context)
@@ -25,11 +25,14 @@ function App() {
   useEffect(() =>{
     const fetchPosts = async ()=>{
        const res = await axiosInstance.get("/posts" + search )
+       const resp = await axiosInstance.get("/draft" + search )
+       console.log(resp.data)
        setPosts(res.data)
     }
     fetchPosts();
   },[search])
 
+  
 
   return (
     <div className="App">

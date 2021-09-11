@@ -6,6 +6,7 @@ const authRoute = require("./roots/auth")
 const userRoute = require('./roots/users')
 const postRoute = require('./roots/posts')
 const catRoute = require('./roots/categories')
+const draftRoute = require('./roots/draft')
 const multer = require('multer')
 const path = require('path');
 
@@ -40,6 +41,8 @@ app.use("/api/auth", authRoute);
 app.use("/api/users", userRoute);
 app.use("/api/posts", postRoute);
 app.use("/api/categories", catRoute);
+app.use("/api/draft", draftRoute);
+
 
 app.use(express.static(path.join(__dirname, "/client/build")));
 

@@ -7,19 +7,26 @@ import icon5 from '../../Assets/Vector-4.png'
 import Write from '../Write/write'
 import logo from '../../Assets/logo.png'
 import { BrowserRouter,  Switch , Route, NavLink, Redirect} from 'react-router-dom'
+import { useLocation } from 'react-router';
 import Navigator from '../Navigator/nav'
-import {useContext} from 'react'
+import {useContext, useEffect, useState} from 'react'
+import DraftPosts from '../Blog/draftPost/draftPosts'
 import {Context} from '../context/Context'
+import {axiosInstance} from '../../config'
  
 
 export default function Dashboard() { 
     const {user} = useContext(Context)
     const { dispatch } = useContext(Context);
+    const [posts, setPosts] = useState([])
+    const {search} = useLocation();
+
     const handleLogout = () => {
         dispatch({ type: "LOG_OUT" });
         localStorage.removeItem("user")
         window.location = '/'
       };
+
     return(
     <div className='dashboard'>
         <div className='dash-left'>
@@ -30,7 +37,7 @@ export default function Dashboard() {
                 <NavLink to ='/dashboard/home'><li className='icon-containter'><img src={icon1} alt='home' className='dash-left-icons'></img></li></NavLink>
                 <NavLink to ='/dashboard/settings/'><li className='icon-containter'><img src={icon4} alt='home' className='dash-left-icons'></img></li></NavLink>
                 <li className='icon-containter'><img src={icon3} alt='home' className='dash-left-icons'></img></li>
-                <li className='icon-containter'><img src={icon5} alt='home' className='dash-left-icons'></img></li>
+                {user.username === 'inesa' ? ( <NavLink to ='/dashboard/review'><li className='icon-containter'><img src={icon5} alt='home' className='dash-left-icons'></img></li></NavLink>) : (<li className='hide-link'><img src={icon5} alt='home' className='dash-left-icons'></img></li>)}
                 <li className='icon-containter'><img src={icon2} alt='home' className='dash-left-icons-last' onClick = {handleLogout}></img></li>
             </ul>
         </div>
@@ -54,7 +61,13 @@ export default function Dashboard() {
         <Route path='/dashboard/settings/'>
             <Navigator />
         </Route>
+        <Route path= '/dashboard/review'>
+            <DraftPosts />
+        </Route>
         </Switch>
      
     </div>
     )}
+
+
+   
